@@ -33,11 +33,49 @@
             <li class="primary-nav-item"><a href="#">Home</a></li>
             <li class="primary-nav-item"><a href="#">Products</a></li>
             <li class="primary-nav-item"><a href="#">About Us</a></li>
-            <li class="primary-nav-item last"><a href="#">Contact Us</a></li>
+            <li class="primary-nav-item last open-dialog">
+              <a href="#">Contact Us</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <dialog id="modal">
+      <div>
+        <h2 class="clr-brand">Contact Us</h2>
+        <form action="/" method="dialog" class="dialog-form">
+          <div class="input-box">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="John Doe" />
+          </div>
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="johndoe@example.com"
+            />
+          </div>
+          <div class="input-box">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Hey, I want to redecorate my living room..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+
+      <img src="images/contact-form-image.jpg" alt="" />
+
+      <span class="material-symbols-outlined close-dialog"> close </span>
+    </dialog>
 
     <main>
       <div class="container">
@@ -115,5 +153,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

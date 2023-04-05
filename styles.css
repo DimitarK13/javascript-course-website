@@ -1,6 +1,7 @@
 :root {
   --neutral-clr-100: #fafafa;
   --neutral-clr-400: #474747;
+  --neutral-clr-800: #1e1f1e;
   --neutral-clr-900: #121412;
 
   --brand-clr-600: #1f6128;
@@ -301,4 +302,70 @@ footer {
 
 .flex-sb p {
   color: var(--neutral-clr-100);
+}
+
+/* DIALOG */
+
+dialog[open] {
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 1250px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: none;
+
+  z-index: 999999;
+}
+
+dialog h2 {
+  font-size: 2rem;
+}
+
+dialog img {
+  display: none;
+}
+
+.dialog-form .input-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.input-box input,
+.input-box textarea {
+  padding: 0.5rem;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid var(--neutral-clr-800);
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+  border: 2px solid var(--neutral-clr-800);
+}
+
+.close-dialog {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  dialog[open] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  dialog img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+  }
 }
